@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 20px;">
+
+    <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnpzj0Sa388-IiM8N0IraKVxd1ZxyYV9mzQ&s" 
+        alt="Doctor image" 
+        style="width: 350px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 20px;"
+    >
+
+    <aside style="float: right; width: 60%; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <form action="register.php" method="post">
+            <h1 style="text-align: center;">Doctor Appointment Form</h1>
+            <hr><br>
+
+            <label>Appointment Date: </label>
+            <input type="date" name="appointment_date" required title="Select appointment date" placeholder="YYYY-MM-DD" style="margin-left: 10px;">
+            <br><br>
+
+            <label>Appointment time: </label>
+            <input type="time" name="appointment_time" required title="Select appointment time" style="margin-left: 10px;">
+            <br><br>
+
+            <label>Name: </label>
+            <input type="text" placeholder="First name" style="margin-left: 90px;">
+            <input type="text" placeholder="Last name" style="margin-left: 30px;">
+            <br><br>
+
+            <label>Gender</label>
+            <input style="margin-left:90px;" type="radio" id="male" name="gender" value="male" title="Select Male as gender">
+            <label for="male">Male</label>
+            <input style="margin-left:50px;" type="radio" id="female" name="gender" value="female" title="Select Female as gender">
+            <label for="female">Female</label>
+            <br><br>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone_number" placeholder="Enter phone number" required title="Enter your phone number" style="margin-left: 35px;">
+            <br><br>
+
+            <label>Address</label>
+            <input type="text" placeholder="City" style="margin-left: 80px;">
+            <input type="text" placeholder="State" style="margin-left: 30px;">
+            <br><br><br>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <label style="margin-top: 10px;">Your Query</label>
+                <textarea name="query" rows="4" cols="50" placeholder="Enter your query here" title="Enter your query" style="margin-left: 50px;"></textarea>
+            </div>
+            <br><br>
+
+            <label>Appointment Type</label>
+            <label style="margin-left:30px;">Select which appointment type(s) you require</label>
+
+            <div style="margin-left:160px; margin-top: 10px;">
+                <input type="checkbox" name="appointment_type" value="general_checkup" title="Select General Checkup">
+                <label for="general_checkup">General Checkup</label>
+                <br>
+                <input type="checkbox" name="appointment_type" value="specialist_consultation" title="Select Specialist Consultation">
+                <label for="specialist_consultation">Specialist Consultation</label>
+                <br>
+                <input type="checkbox" name="appointment_type" value="heart_checkup" title="Select Heart Checkup">
+                <label for="heart_checkup">Heart Checkup</label>
+                <br>
+                <input type="checkbox" name="appointment_type" value="eye_checkup" title="Select Eye Checkup">
+                <label for="eye_checkup">Eye Checkup</label>
+            </div>
+            <input type="submit" placeholder="Send" value="Send" style="margin-left: 160px; margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+    </aside>
+</body>
+</html>
